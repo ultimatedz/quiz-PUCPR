@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    background-color: pink;
+    background-color: #9973E9;
 }
 
 
@@ -17,16 +17,25 @@
     display:flex;
     border-color: black;
     border-style: outset;
-    background-color: rgba(255, 202, 239, 0.89);
+    background-color:#F4F4F4;
     width: 230px;
+    height: 500px;
     padding-bottom: 15%;
-    padding-top: 5%;
-    padding: 3%;
+    padding: 5%;
+    padding-top: 0;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 5px 10px;
+    box-shadow: 0 5px 10px #9973E9;
+    
     gap: 10px;
 }
+
+.logo{
+    height: 280px;
+    margin-bottom: 20%;
+}
+
+
 
 
 
@@ -42,6 +51,8 @@
 .menu{
     margin: 2%;
     margin-bottom: 5%;
+    font-size: 30px;
+    color: #503DC6;
 }
 
 #classificao{
@@ -55,9 +66,10 @@ a{
 }
 
 
-a:hover{
-    font-size: 20px;
-    font-weight: bold;
+.menu:hover{
+    font-size: 30px;
+    font-weight:700;
+    
 }
 
 
@@ -74,10 +86,22 @@ ul{
 
 
 .btn-voltar{
-    border-radius: 30px;
-    padding: 10px;
-    background-color: pink;
+    border-radius: 40px;
+    padding: 15px;
+    background-color: #f4f4f4;
     border-color: rgb(107,56,94);
+    margin-right: 25px;
+    font-size: 18px;
+    transition: 1s ease-out;
+}
+
+
+.btn-voltar:hover{
+    background-color: #9973E9;
+}
+
+.btn-jogar:hover{
+    background-color: #6639c7;
 }
 
 
@@ -85,6 +109,9 @@ ul{
     border-radius: 40px;
     padding: 15px;
     font-size: 18px;
-    background-color: rgb(107,56,94);
-    color: white
+    background-color: #9973E9;
+    color: white;
+    transition: background-color 1s ease-out 100ms
+
+
 }

@@ -5,31 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="jogo.css">
+    <script src="jogo.js" defer></script>
     <title>Quiz - jogo</title>
 </head>
 <body>
 
     <div class="container">
         <div class="box">
-            <div class="boxQuestion">
-                <h2>Qual das seguintes linguagens de programação é considerada de baixo nivel</h2>
-            </div>
-
-            <div class="boxRespostas">
-
-                <div class="respostas">
-                    <button class="btn-resposta">Python</button>
+            <div class="iconsTop">
+                <div>
+                    <span class="pontos">Ponto</span>
                 </div>
-                <div class="respostas">
-                    <button class="btn-resposta">JavaScript</button>
-                </div>
-                <div class="respostas">
-                    <button class="btn-resposta">Assembly</button>
-                </div>
-                <div class="respostas">
-                    <button class="btn-resposta">Portugol</button>
+                <div class="timer">
+                    <span class="pontos">Timer</span>
                 </div>
             </div>
+
+            <div class="boxAll">
+                <div class="boxQuestion">
+                    <h2 id="pergunta"></h2>
+                </div>
+    
+                <div class="boxRespostas">
+    
+                    <div class="respostas">
+                        <button class="btn-resposta" id="resposta1"></button>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-resposta" id="resposta2"></button>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-resposta" id="resposta3"></button>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-resposta" id="resposta4"></button>
+                    </div>
+                </div>
+
+
+            </div>
+            
            
             </div>
         </div>

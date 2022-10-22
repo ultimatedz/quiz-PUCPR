@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap');
+
+
 
 .container{
     display: flex;
@@ -6,21 +9,20 @@
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    background-color: pink;
+    background-color: #9973E9;
+    
 }
 
 
 .box{
-    display:flex;
+
     border-color: black;
     border-style: outset;
     background-color: rgba(255, 202, 239, 0.89);
     padding-bottom: 15%;
     padding: 3%;
     padding-top: 1%;
-    width: 200px;
-    flex-direction: column;
-    align-items: center;
+    width: 350px;
     box-shadow: 0 5px 10px;
     gap: 25px;
 }
@@ -32,7 +34,6 @@
     margin-top: 0%;
     font-size: 60px;
     font-weight: 700;
-    color: rgba(107, 56, 94, 0.959);
     font-style: italic;
 }
 
@@ -51,18 +52,60 @@
 
 .btn-resposta{
     justify-content: center;
-    width: 20vh;
+    width: 24vh;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 10px;
+    color: #9973E9
+    
 }
 
+
+.iconsTop{
+    display: flex;
+    gap: 65%;
+    margin-bottom: 6%;
+    margin-top: 6%;
+    
+    
+    
+}
 
 
 .boxQuestion{
     border-style: outset;
     border-color: black;
+    margin-bottom: 10px;
     padding: 5%;
-    width: 97%;
+    width: 90%;
+    height: 130px;
     text-align: center;
+    font-size: 80%;
     border-radius: 15px;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    color: #503DC6;
 }
 
 
+.boxAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.pontos{
+    background-color: #9973E9;
+}
+
+
+
+
+.pontos{
+    border-color: black;
+    padding: 3%;
+    border-style: outset;
+    border-radius: 10px;
+}
