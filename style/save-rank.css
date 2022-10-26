@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap');
+
+
+body{
+    margin: 0px;
+}
+
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;    
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #9973E9;
+    
+}
+
+
+.box{
+    display:flex;
+    border-color: black;
+    border-style: outset;
+    background-color:#F4F4F4;
+    justify-content: center;
+    width: 230px;
+    height: 500px;
+    text-align: center;
+    padding-bottom: 15%;
+    padding: 5%;
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 10px #9973E9;
+    margin: 0px;
+    color: #503DC6;
+    
+    gap: 10%;
+}
+
+
+
+
+
+.inputName{
+    border-radius: 10px;
+    border-style: outset;
+    height: 90%;
+    border-color: black;
+    outline: none;
+    color: #503DC6;
+
+
+}
+
+
+#btn-save{
+    border-radius: 10px;
+    border-style: outset;
+    font-size: 20px;
+    color: #f4f4f4;
+    background-color: #9973E9;
+    transition: 1s ease-out 100ms
+
+    
+}
+
+#btn-save:hover{
+    background-color: #503DC6;
+}
