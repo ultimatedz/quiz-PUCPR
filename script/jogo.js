@@ -5,6 +5,7 @@ const ponto = document.querySelector('#score');
 const endLink = document.querySelector('#link-end');
 const rodada = document.querySelector('#round');
 const timer = document.querySelector('#timer');
+const timerBar = document.querySelector('.timerBar');
 
 let errors = 0;
 let img = document.createElement("IMG");
@@ -26,7 +27,7 @@ let removeImagem = false;
 
 
 function relogio(){
-    temporizador = 15;
+    temporizador = 14;
     tempor = setInterval(function() {   
         console.log(temporizador);
         timer.innerHTML = "Tempo: " + temporizador --;
@@ -50,6 +51,21 @@ function checkTimer(temporizador){
 }
 
 
+function restartAnimation(){
+    timerBar.classList.remove('timerBar');
+    setTimeout(function(){
+        timerBar.classList.add('timerBar');
+    },10);
+
+}
+
+function pauseAnimation(){
+    timerBar.style.animationPlayState='paused';
+}
+
+function resumeAnimation(){
+    timerBar.style.animationPlayState='running';
+}
 
 
 
@@ -238,6 +254,10 @@ function mudarRespostas(rand){    // Função responsável por alterar as respos
     for (i=0;i<resposta.length;i++){  // Itera sobre as respostas e define uma resposta para os slots
         resposta[k[i]].innerHTML= question[rand].opcoes[i];
     }
+    
+
+    
+
 }
 
 
@@ -284,6 +304,7 @@ function verificarResposta(i){   // Função responsável por verificar as respo
             resposta[i].style.backgroundColor = "#ff6961";
         }
     }
+    pauseAnimation();
     btnNext.disabled = false;
     btnNext.style.opacity = '1';    //Habilita o botão de next
     
@@ -349,6 +370,8 @@ btnNext.onclick = function(){   //Função responsável por gerenciar o botão n
     console.log(pontuacao[0].pontos);
     relogio();
     mudarPergunta(arrPerguntas[0])  //Chama as perguntas novamente
+    restartAnimation();
+    resumeAnimation();
 }
 
 
@@ -356,6 +379,5 @@ btnNext.onclick = function(){   //Função responsável por gerenciar o botão n
 
 document.onload = relogio();
 document.onload = (mudarPergunta(arrPerguntas[0]));
-
 
 

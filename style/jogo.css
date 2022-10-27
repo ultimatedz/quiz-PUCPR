@@ -63,10 +63,15 @@ body{
     padding: 10px;
     transition: 1s ease-out 100ms;
     background-color: #f4f4f4;
+    cursor: pointer;
 }
 
 
 
+
+#pergunta{
+    cursor: default;
+}
 
 
 
@@ -81,6 +86,31 @@ body{
     
     
 }
+
+
+.timerBar{
+    width: 0px;
+    height: 5px;
+    background-color: red;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    animation-timing-function: linear;
+    animation-name: bar;
+    animation-duration: 15s;
+}
+
+@keyframes bar{
+    from {width: 0px;}
+    to {width: 100%;}
+    0% {background-color: green;}
+    50% {background-color: yellow;}
+    100% {background-color: red;}
+}
+
+
+
+
+
 
 
 .boxQuestion{
@@ -117,6 +147,7 @@ body{
     border-style: outset;
     border-radius: 10px;
     font-size: 14px;
+    cursor:default;
 }
 
 
@@ -138,6 +169,7 @@ body{
     color: #503DC6;
     transition: background-color 1s ease-out 100ms;
     opacity: 0;
+    cursor: pointer;
 
 }
 

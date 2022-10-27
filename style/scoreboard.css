@@ -5,6 +5,17 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 .container{
     display: flex;
     width: 100vw;
@@ -39,13 +50,13 @@ body{
 
 
 table{
+    width: 100px;
     border: 1px solid;
     text-align: center;
     border-collapse: collapse;
     border-radius: 20px;
     color: black;
     
-
 }
 
 
