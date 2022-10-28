@@ -3,6 +3,28 @@
 
 
 
+
+
+@media screen and (max-width: 670px) {
+
+    #audio{
+        display: none;
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 body{
     margin: 0;
 }

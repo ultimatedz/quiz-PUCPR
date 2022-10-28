@@ -26,7 +26,7 @@ let removeImagem = false;
 
 
 
-function relogio(){
+function relogio(){                     //Funções respnsaveis pelo timer
     temporizador = 14;
     tempor = setInterval(function() {   
         console.log(temporizador);
@@ -51,7 +51,7 @@ function checkTimer(temporizador){
 }
 
 
-function restartAnimation(){
+function restartAnimation(){        //Reseta animação da TimeBar
     timerBar.classList.remove('timerBar');
     setTimeout(function(){
         timerBar.classList.add('timerBar');
@@ -59,17 +59,13 @@ function restartAnimation(){
 
 }
 
-function pauseAnimation(){
+function pauseAnimation(){          //Pausa timeBar
     timerBar.style.animationPlayState='paused';
 }
 
-function resumeAnimation(){
+function resumeAnimation(){         //Restarta timeBar
     timerBar.style.animationPlayState='running';
 }
-
-
-
-
 
 
 
@@ -81,16 +77,10 @@ for (i=0;i<11;i++){
 arrPerguntas = shuffleArray(arrPerguntas);  //Embaralha o array
 
 
-
-
 function randomNumber(){    // Gerador de numero aleatorio
     return Math.floor(Math.random() * 10);
 }
-
 let rand = randomNumber();   
-
-
-
 
 
 function shuffleArray(arr) {      // Função de shuffle para as respostas
@@ -103,7 +93,7 @@ function shuffleArray(arr) {      // Função de shuffle para as respostas
 
 
 
-
+// Array de perguntas
 let question = [
     {
         id : 1,
@@ -232,11 +222,11 @@ let question = [
 
 
 
-function mudarPergunta(rand){     // Função que setta a pergunta baseada no numero aleatorio gerado lá em cima
+function mudarPergunta(rand){     // Função que setta a pergunta baseada no numero aleatorio gerado lá na função RandomNumber
     rodada.innerHTML = "Rodada: " + contador;
     pergunta.innerHTML= question[rand].pergunta; // Define a pergunta baseada no numero rand
     console.log(pergunta.id);
-    if(rand == 10){
+    if(rand == 10){         // Define imagem pra pergunta com imagem
         
         img.src = "../img/ram.png";
         img.style.width = "200px";
@@ -290,9 +280,7 @@ function verificarResposta(i){   // Função responsável por verificar as respo
     if(contador == 6){
         endGame();
     }
-
     pararRelogio();
-
 
     for(i=0;i<resposta.length;i++){
         resposta[i].disabled = true;    //Desativa os botões quando algum é clicado
@@ -311,7 +299,8 @@ function verificarResposta(i){   // Função responsável por verificar as respo
 }
 
 
-function disableResposta (){
+
+function disableResposta (){        //Função que desativa os botões de resposta
     for (i=0;i<resposta.length;i++){
         resposta[i].disabled = true;
         resposta[i].style.color = "black";
@@ -322,10 +311,7 @@ function disableResposta (){
 
 
 
-
-
-
-function endGame(){                     //Função responsável por encerrar o game
+function endGame(){                 //Função responsável por encerrar o game
     btnNext.innerHTML = "Fim";
     btnNext.style.opacity = '1';
     btnNext.disabled = false;
@@ -377,7 +363,7 @@ btnNext.onclick = function(){   //Função responsável por gerenciar o botão n
 
 
 
-document.onload = relogio();
-document.onload = (mudarPergunta(arrPerguntas[0]));
+document.onload = relogio();        //Inicia o timer
+document.onload = (mudarPergunta(arrPerguntas[0])); //Inicia as perguntas
 
 

@@ -29,6 +29,7 @@ function seuNome(){
     inputName.type = 'text';
     inputName.id = 'nome';
     inputName.className = 'inputName';
+    inputName.required = true;
     inputNome.appendChild(inputName);
 }
 
@@ -78,6 +79,7 @@ function salvarNome(){
     console.log(userData);
     localStorage.setItem("dados", JSON.stringify(userData))
 }
+
 
 
 

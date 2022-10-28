@@ -41,6 +41,12 @@ function generateTableHead(table, data) {
     for (let key of data){
         let th = document.createElement("th");
         let text = document.createTextNode(key);
+        if(key == "Acertos"){
+          th.classList.add("acertos");
+        }
+        if(key == "Erros"){
+          th.classList.add("erros");
+        }
         th.appendChild(text);
         row.appendChild(th);
     }
@@ -54,6 +60,12 @@ function generateTableHead(table, data) {
       for (key in element) {
         let cell = row.insertCell();
         let text = document.createTextNode(element[key]);
+        if(key == "Acertos"){
+          cell.classList.add("acertos");
+        }
+        if(key =="Erros"){
+          cell.classList.add("erros");
+        }
         cell.appendChild(text);
       }
     }
